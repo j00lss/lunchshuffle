@@ -1,0 +1,21 @@
+{
+  "name": "lunchshuffle",
+  "version": "0.0.0",
+  "description": "Lunch music tool",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://j00lss@github.com/j00lss/lunchshuffle.git"
+  },
+  "author": "j00lss",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "e966e4291260717977300cb4aac2855ab1302e3a",
+  "dependencies": {
+    "express": "~3.4.7",
+    "logfmt": "~0.18.1"
+  }
+}
