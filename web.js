@@ -16,12 +16,14 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
 
 app.use(logfmt.requestLogger());
+app.use(express.static(__dirname))
 
 app.get('/', function(req, res) {
 	//res.send('Hello World!');
 	res.render('index', { 
-		pageTitle: 'Home',
-		hello: 'Hello from Jade and Express!' 
+		pageTitle: 'Shuffle it',
+		hello: 'Lunch shuffle! (demo)',
+		songId: songs[Math.floor( Math.random() * songs.length)]
 	});
 });
 

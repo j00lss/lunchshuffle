@@ -1,0 +1,26 @@
+body {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+div.iframeWrap {
+	width: 80px;
+	height: 80px;
+	border: 1px solid red;
+	border-radius: 40px;
+	opacity: .01;
+	overflow: hidden;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -40px 0 0 -40px;
+}
+
+#bgImage {
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -50px 0 0 -50px;
+}
