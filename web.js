@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 	//res.send('Hello World!');
 	res.render('index', { 
 		pageTitle: 'Shuffle it',
-		hello: 'Lunch shuffle! (demo)',
+		hello: 'Lunch shuffle! (demo) v0.1',
 		songId: songs[Math.floor( Math.random() * songs.length)]
 	});
 });
