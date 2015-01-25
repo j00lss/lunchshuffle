@@ -1,0 +1,163 @@
+html {
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+body {
+	background:#faa74a url(../img/bg.gif);
+	font-family:'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+	line-height:1.5em;
+	font-size:12px;
+	color:#222;
+	text-align:center;
+	border:0 none;
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+.content {
+	width:600px;
+    height:600px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-300px 0 0 -300px;
+}
+
+.header {
+	width:600px;
+	height: 75px;
+	background: transparent;
+	margin:auto;
+	padding:0;
+	text-align:left;
+	overflow: hidden;
+	min-height:10px;
+	text-align: left;
+}
+
+.footer {
+	width:600px;
+	height: 55px;
+	background: transparent;
+	margin:auto;
+	padding-top:15px;
+	text-align:left;
+	overflow: hidden;
+	text-align: left;
+}
+
+.player {
+	width:600px;
+	height: 470px;
+	background: url(../img/05_LunchShuffleAnimation.gif) center center no-repeat;
+	margin:auto;
+	padding:0;
+	text-align:left;
+	overflow:hidden;
+	min-height:20px;
+	text-align: left;
+}
+
+h1 {
+	font-size: 40px;
+	color: #FFF;
+	margin-top: 10px;
+	margin-bottom: 7px;
+	letter-spacing: -0.5px;
+}
+
+h2 {
+	font-size: 18px;
+	color: #b6732b;
+	margin: 0 0 3px 0;
+	font-weight: 600;
+	text-shadow: 0 1px #ffbc72;
+}
+
+h2 a {
+	color: #b6732b;
+	border-bottom: 1px dotted #b6732b;
+	text-decoration: none;
+	-webkit-transition: color 0.2s ease-in-out;
+ 	-moz-transition: color 0.2s ease-in-out;
+  	-o-transition: color 0.2s ease-in-out;
+  	transition: color 0.2s ease-in-out;
+}
+
+h2 a:hover {
+	text-decoration: none;
+	color: #FFF;
+	border-bottom: 1px dotted #FFF;
+}
+
+#logo {
+	margin-right: 7px;
+	margin-bottom: 1px;
+	}
+	
+#buttons {
+	position: relative;
+	top: 363px;
+	right: -417px;
+	}
+
+.shuffle {
+	background-color:transparent;
+	background-image:url(../img/buttons.png);
+	background-position:0 0;
+	width:72px;
+	height: 75px;
+	display: block;
+	margin-right: 10px;
+	float: left;
+}
+
+.shuffle:hover {
+	background-color:transparent;
+	background-image:url(../img/buttons.png);
+	background-position:0 -77px;
+	width:72px;
+	height: 75px;
+	display: block;
+	margin-right: 10px;
+	float: left;
+}
+
+.play {
+	background-color:transparent;
+	background-image:url(../img/buttons.png);
+	background-position:72px 0;
+	width:72px;
+	height: 75px;
+	display: block;
+	float: left;
+}
+
+.play:hover {
+	background-color:transparent;
+	background-image:url(../img/buttons.png);
+	background-position:72px -77px;
+	width:72px;
+	height: 75px;
+	display: block;
+	float: left;
+}
+
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type1 {
+	position: relative;
+	top: 160px;
+	right: -167px;
+	width: 150px;
+	height: 150px;
+	background: #000 url(../img/nirvana.jpg) center center;
+}
