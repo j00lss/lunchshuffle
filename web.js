@@ -18,13 +18,6 @@ var spotifyApi = new SpotifyWebApi({
 
 var authorizeURL = spotifyApi.createAuthorizeURL(spotifyScopes, spotifyState);
 
-spotifyApi.getPlaylist('joolss', '3mBXQXXuEkx3PE2Zwm7vBd')
-  .then(function(data) {
-    _ERRORMSG = 'Some information about this playlist: ' + data;
-  }, function(err) {
-    _ERRORMSG = 'Something went wrong! ' + err;
-  });
-
 var app = express();
 
 app.set('views', __dirname + '/views')
@@ -33,19 +26,31 @@ app.set('view engine', 'vash')
 app.use(logfmt.requestLogger());
 app.use(express.static(__dirname))
 
-app
-	.get('/', function(req, res) {
-	//res.send('Hello World!');
-	res.render('index', { 
-		pageTitle: 'Lez shuffle it',
-		hello: 'Lunch shuffle! (demo) v0.2',
-		//songId: songs[Math.floor( Math.random() * songs.length)]
-	});
-	}).get('/cb', function(req, res) {
-		res.render('cb', { 
-			pageTitle: 'Callback page',
+var renderMainPage = function() {
+	app.get('/', function(req, res) {
+		res.render('index', { 
+			pageTitle: 'Lez shuffle it',
+			hello: 'Lunch shuffle! (demo) v0.2 | ' + _ERRORMSG,
+			//songId: songs[Math.floor( Math.random() * songs.length)]
 		});
 	});
+};
+
+spotifyApi.getPlaylist('joolss', '3mBXQXXuEkx3PE2Zwm7vBd')
+  .then(function(data) {
+    _ERRORMSG = 'Some information about this playlist: ' + data;
+    renderMainPage();
+  }, function(err) {
+    _ERRORMSG = 'Something went wrong! ' + err;
+    renderMainPage();
+  });
+
+
+app.get('/cb', function(req, res) {
+	res.render('cb', { 
+		pageTitle: 'Callback page',
+	});
+});
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
