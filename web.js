@@ -1,3 +1,5 @@
+var _ERRORMSG = '';
+
 var express = require("express");
 var logfmt = require("logfmt");
 var SpotifyWebApi = require('spotify-web-api-node');
@@ -6,7 +8,7 @@ var spotifyScopes = ['user-read-private'],
 	spotifyState = 'some-state-of-my-choice';
 	spotifyClientId = '580224fcb345437ebea001635c15a587',
 	spotifyClientSecret = '7f94649fd6a142a190482081fdc158b6',
-	spotifyRedirectUri = 'http://localhost:5000/cb';
+	spotifyRedirectUri = 'http://lunch-shuffle.herokuapp.com/cb';
 
 var spotifyApi = new SpotifyWebApi({
 	clientId : spotifyClientId,
@@ -16,12 +18,12 @@ var spotifyApi = new SpotifyWebApi({
 
 var authorizeURL = spotifyApi.createAuthorizeURL(spotifyScopes, spotifyState);
 
-/*spotifyApi.getPlaylist('joolss', '3mBXQXXuEkx3PE2Zwm7vBd')
+spotifyApi.getPlaylist('joolss', '3mBXQXXuEkx3PE2Zwm7vBd')
   .then(function(data) {
-    console.log('Some information about this playlist', data);
+    _ERRORMSG = 'Some information about this playlist: ' + data;
   }, function(err) {
-    console.log('Something went wrong!', err);
-  });*/
+    _ERRORMSG = 'Something went wrong! ' + err;
+  });
 
 var app = express();
 
