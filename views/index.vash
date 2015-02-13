@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			@model.pageTitle
+		</title>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body>
+		<h1>
+			@model.hello
+		</h1>
+		<img id="bgImage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pizza_Hawaii_02.jpg/150px-Pizza_Hawaii_02.jpg">
+		<div id="buttonWrap" class="iframeWrap">
+			<iframe src="https://embed.spotify.com/?uri=spotify:track:0m8BLDLvxup9iB3XkId4Jz" width="300" height="380" frameborder="0" allowtransparency="true">
+			</iframe>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+		</script>
+		<script src="scripts/main.js">
+		</script>
+	</body>
+</html>

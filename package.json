@@ -19,6 +19,8 @@
     "logfmt": "~0.18.1",
     "jade": "*",
     "stylus": "*",
-    "nib": "*"
+    "nib": "*",
+    "vash": "^0.7.12-1",
+    "spotify-web-api-node": "*"
   }
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			@model.pageTitle
+		</title>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body>
+		<h1>
+			@model.pageTitle
+		</h1>
+	</body>
+</html>
